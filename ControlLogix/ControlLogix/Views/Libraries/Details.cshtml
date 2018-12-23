@@ -1,0 +1,54 @@
+﻿@model ControlLogix.Models.Library
+
+@{
+    ViewData["Title"] = "Library Details";
+}
+
+<br />
+<br />
+
+<h5>Library Details</h5>
+
+<h1>@Html.DisplayFor(modelItem => Model.Name)</h1>
+
+
+<h4>@Html.DisplayFor(modelItem => Model.Description)</h4>
+
+<br />
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PrimaryKey)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            @*<th></th>*@
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ControlBlocks.Values.ToArray())
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrimaryKey)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                @*<td>
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    </td*@>
+            </tr>
+        }
+    </tbody>
+</table>
