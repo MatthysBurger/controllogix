@@ -21,5 +21,17 @@ namespace ControlLogix.Models
                 return _controlblocks;
             }
         }
+
+        public string BlockName { get; set; }
+        public string BlockDescription { get; set; }
+
+        private Dictionary<int, Port> _block_ports = new Dictionary<int, Port>();
+        public Dictionary<int,Port> BlockPorts
+        {
+            get
+            {
+                return _block_ports;
+            }
+        }
     }
 }

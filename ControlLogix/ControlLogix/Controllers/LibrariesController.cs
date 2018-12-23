@@ -13,7 +13,7 @@ namespace ControlLogix.Controllers
         private static Dictionary<int, Library> _libraries = new Dictionary<int, Library>();
         static LibrariesController()
         {
-            _libraries.Add(1, new Library { PrimaryKey = 1, Name = "Basic", Description = "Basic control/logic blocks" });
+            _libraries.Add(1, new Library { PrimaryKey = 1, Name = "Basic", Description = "Basic control/logic blocks", BlockName = "ADD", BlockDescription = "Computes the sum of two inputs" });
 
             _libraries[1].ControlBlocks.Add(1, new ControlBlock() { Description = "Add two values", PrimaryKey = 1, Name = "ADD" });
             _libraries[1].ControlBlocks.Add(2, new ControlBlock() { Description = "Simple PID Controller", PrimaryKey = 2, Name = "PID" });
@@ -45,11 +45,26 @@ namespace ControlLogix.Controllers
             _libraries[1].ControlBlocks.Add(28, new ControlBlock() { Description = "Simple PID Controller", PrimaryKey = 28, Name = "PID" });
             _libraries[1].ControlBlocks.Add(29, new ControlBlock() { Description = "Add two values", PrimaryKey = 29, Name = "ADD" });
 
-            _libraries.Add(101, new Library { PrimaryKey = 101, Name = "Advanced", Description = "Basic control/logic blocks" });
+            _libraries[1].BlockPorts.Add(10, new Port() { ID = 10, Name = "IN1", Input = true, Value = "15", IsConnectable = true });
+            _libraries[1].BlockPorts.Add(20, new Port() { ID = 20, Name = "IN2", Input = true, Value = "20", IsConnectable = true });
+            _libraries[1].BlockPorts.Add(1000, new Port() { ID = 1000, Name = "OUT", Value = "35", IsConnectable = true });
+
+            _libraries.Add(101, new Library { PrimaryKey = 101, Name = "Advanced", Description = "Basic control/logic blocks", BlockName = "Adv. PID", BlockDescription = "Advanced PID with feedforward, anti-windup, etc." });
 
             _libraries[101].ControlBlocks.Add(1, new ControlBlock() { Description = "Advanced PID Controller", PrimaryKey = 1, Name = "Adv. PID" });
+
+            _libraries[101].BlockPorts.Add(10, new Port() { ID = 10, Name = "PV", Input = true, Value = "100.000", IsConnectable = true });
+            _libraries[101].BlockPorts.Add(20, new Port() { ID = 20, Name = "SP", Input = true, Value = "100.00", IsConnectable = true });
+            _libraries[101].BlockPorts.Add(30, new Port() { ID = 30, Name = "K_I", Input = true, Value = "10.000" });
+            _libraries[101].BlockPorts.Add(40, new Port() { ID = 40, Name = "K_D", Input = true, Value = "0.000" });
+            _libraries[101].BlockPorts.Add(50, new Port() { ID = 50, Name = "K_P", Input = true, Value = "0.100" });
+            //_libraries[101].BlockPorts.Add(60, new Port() { ID = 60, Name = "IN6", Input = true, Value = "1" });
+            //_libraries[101].BlockPorts.Add(70, new Port() { ID = 70, Name = "IN7", Input = true, Value = "1" });
+            _libraries[101].BlockPorts.Add(1000, new Port() { ID = 1000, Name = "OUT", Value = "13.867", IsConnectable=true });
+            _libraries[101].BlockPorts.Add(1010, new Port() { ID = 1010, Name = "Q", Value = "0", IsArchived=true});
+            _libraries[101].BlockPorts.Add(1020, new Port() { ID = 1020, Name = "Q_N", Value = "1" });
         }
-    
+
         // GET: Find
         public ActionResult Index()
         {

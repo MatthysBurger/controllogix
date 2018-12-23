@@ -14,7 +14,77 @@
 
 <h4>@Html.DisplayFor(modelItem => Model.Description)</h4>
 
-<br />
+@{
+    List<Port> inputs = new List<Port>();
+    List<Port> outputs = new List<Port>();
+
+    foreach (var port in Model.BlockPorts.Values.ToArray())
+    {
+        if (port.Input)
+        {
+            inputs.Add(port);
+        }
+        else
+        {
+            outputs.Add(port);
+        }
+    }
+    int block_offset = 50;
+    int height = 50 + Math.Max(inputs.Count, outputs.Count) * 50;
+    int height_total = height + 100;
+    int descrtext_pos = height + 25 + block_offset;
+
+    int inputs_count = 0;
+    int outputs_count = 0;
+}
+
+<svg width="300" height="@height_total">
+    <defs id="defs4">
+        <linearGradient id="linearGradient5255">
+            <stop style="stop-color:#ffcc00;stop-opacity:1;" offset="0" id="stop5257" />
+            <stop style="stop-color:#c19a00;stop-opacity:1;" offset="1" id="stop5259" />
+        </linearGradient>
+    </defs>
+
+    <rect style="fill:url(#linearGradient5255)" id="rect3769" width="200" height="@height" x="@block_offset" y="@block_offset" ry="10" rx="10" />
+    <text style="text-anchor:middle" id="rect3775" x="150" y="75">@Model.BlockName</text>
+    <text style="text-anchor:middle;font-size:smaller" id="rect3776" x="150" y="@descrtext_pos">@Model.BlockDescription</text>
+
+    @foreach (var port in inputs)
+    {
+        int pos_y_1 = 100 + (inputs_count++) * 50;
+        int pos_y = pos_y_1 + 15;
+        int pos_y_2 = pos_y + 5;
+        <rect style="fill:black;fill-opacity:0.1" width="50" height="25" x="50" y="@pos_y_1" ry="0" rx="0" />
+        if (port.IsConnectable)
+        {
+            <line style="stroke-linecap:butt;stroke-width:2;stroke-linecap:round" stroke="blue" x1="1" x2="49" y1="@pos_y_2" y2="@pos_y_2"/>
+        }
+        <svg>
+            <text style="text-anchor:middle;font-size:smaller" x="75" y="@pos_y">@port.Name</text>
+            <text style="text-anchor:middle;font-size:smaller" x="25" y="@pos_y">@port.Value</text>
+        </svg>
+
+    }
+
+    @foreach (var port in outputs)
+    {
+        int pos_y_1 = 100 + (outputs_count++) * 50;
+        int pos_y = pos_y_1 + 15;
+        int pos_y_2 = pos_y + 5;
+        <rect style="fill:black;fill-opacity:0.1" width="50" height="25" x="200" y="@pos_y_1" ry="0" rx="0" />
+        if (port.IsConnectable)
+        {
+            <line style="stroke-linecap:butt;stroke-width:2;stroke-linecap:round" stroke="blue" x1="251" x2="299" y1="@pos_y_2" y2="@pos_y_2" />
+        }
+        <svg>
+            <text style="text-anchor:middle;font-size:smaller" x="225" y="@pos_y">@port.Name</text>
+            <text style="text-anchor:middle;font-size:smaller" x="275" y="@pos_y">@port.Value</text>
+        </svg>
+    }
+
+</svg>
+
 <br />
 
 <table class="table">
