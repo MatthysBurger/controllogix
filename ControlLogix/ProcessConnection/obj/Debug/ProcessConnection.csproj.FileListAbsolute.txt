@@ -1,0 +1,27 @@
+C:\git\controllogix\ControlLogix\ProcessConnection\bin\Debug\ProcessConnection.dll
+C:\git\controllogix\ControlLogix\ProcessConnection\bin\Debug\ProcessConnection.pdb
+C:\git\controllogix\ControlLogix\ProcessConnection\bin\Debug\SPPA-T3000 Database.dll
+C:\git\controllogix\ControlLogix\ProcessConnection\bin\Debug\SPPA-T3000 Operator Station.exe
+C:\git\controllogix\ControlLogix\ProcessConnection\bin\Debug\Infralution.Controls.VirtualTree.dll
+C:\git\controllogix\ControlLogix\ProcessConnection\bin\Debug\Infralution.Controls.dll
+C:\git\controllogix\ControlLogix\ProcessConnection\bin\Debug\Infralution.Common.dll
+C:\git\controllogix\ControlLogix\ProcessConnection\bin\Debug\de\Infralution.Controls.VirtualTree.resources.dll
+C:\git\controllogix\ControlLogix\ProcessConnection\bin\Debug\fr\Infralution.Controls.VirtualTree.resources.dll
+C:\git\controllogix\ControlLogix\ProcessConnection\bin\Debug\it\Infralution.Controls.VirtualTree.resources.dll
+C:\git\controllogix\ControlLogix\ProcessConnection\bin\Debug\ru\Infralution.Controls.VirtualTree.resources.dll
+C:\git\controllogix\ControlLogix\ProcessConnection\bin\Debug\zh-Hans\Infralution.Controls.VirtualTree.resources.dll
+C:\git\controllogix\ControlLogix\ProcessConnection\bin\Debug\de\Infralution.Controls.resources.dll
+C:\git\controllogix\ControlLogix\ProcessConnection\bin\Debug\fr\Infralution.Controls.resources.dll
+C:\git\controllogix\ControlLogix\ProcessConnection\bin\Debug\it\Infralution.Controls.resources.dll
+C:\git\controllogix\ControlLogix\ProcessConnection\bin\Debug\ru\Infralution.Controls.resources.dll
+C:\git\controllogix\ControlLogix\ProcessConnection\bin\Debug\zh-Hans\Infralution.Controls.resources.dll
+C:\git\controllogix\ControlLogix\ProcessConnection\bin\Debug\de\Infralution.Common.resources.dll
+C:\git\controllogix\ControlLogix\ProcessConnection\bin\Debug\fr\Infralution.Common.resources.dll
+C:\git\controllogix\ControlLogix\ProcessConnection\bin\Debug\it\Infralution.Common.resources.dll
+C:\git\controllogix\ControlLogix\ProcessConnection\bin\Debug\ru\Infralution.Common.resources.dll
+C:\git\controllogix\ControlLogix\ProcessConnection\bin\Debug\zh-Hans\Infralution.Common.resources.dll
+C:\git\controllogix\ControlLogix\ProcessConnection\obj\Debug\ProcessConnection.csprojAssemblyReference.cache
+C:\git\controllogix\ControlLogix\ProcessConnection\obj\Debug\ProcessConnection.csproj.CoreCompileInputs.cache
+C:\git\controllogix\ControlLogix\ProcessConnection\obj\Debug\ProcessConnection.csproj.CopyComplete
+C:\git\controllogix\ControlLogix\ProcessConnection\obj\Debug\ProcessConnection.dll
+C:\git\controllogix\ControlLogix\ProcessConnection\obj\Debug\ProcessConnection.pdb
