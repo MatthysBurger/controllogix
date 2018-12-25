@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using ControlLogix.ProcessConnection;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SPPA_T3000.Process_Connection;
 
 namespace ControlLogix.Controllers
 {
@@ -19,7 +20,22 @@ namespace ControlLogix.Controllers
         // GET: Components/Details/5
         public ActionResult Details(int id)
         {
-            return View(ProcessConnectionManager.GetLogicBlock(id));
+            LogicBlock lb = ProcessConnectionManager.GetLogicBlock(id);
+            if (lb != null)
+            {
+                return View(lb);
+            }
+            else
+            {
+                LogicBlock lb_Error = new LogicBlock();
+                lb_Error.ID = -1;
+                lb_Error.Item = string.Empty;
+                lb_Error.Tag = string.Empty;
+                lb_Error.TypeName = "not found";
+                lb_Error.Designation = "Component could not be located";
+
+                return View(lb_Error);
+            }
         }
 
         // GET: Components/Create

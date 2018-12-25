@@ -30,27 +30,6 @@ C:\git\controllogix\ControlLogix\ControlLogix\obj\Debug\netcoreapp2.2\ControlLog
 C:\git\controllogix\ControlLogix\ControlLogix\obj\Debug\netcoreapp2.2\ControlLogix.csproj.CopyComplete
 C:\git\controllogix\ControlLogix\ControlLogix\obj\Debug\netcoreapp2.2\Razor\Views\Libraries\Details.g.cshtml.cs
 C:\git\controllogix\ControlLogix\ControlLogix\obj\Debug\netcoreapp2.2\Razor\Views\Libraries\Index.g.cshtml.cs
-C:\git\controllogix\ControlLogix\ControlLogix\bin\Debug\netcoreapp2.2\ProcessConnection.dll
-C:\git\controllogix\ControlLogix\ControlLogix\bin\Debug\netcoreapp2.2\SPPA-T3000 Operator Station.exe
 C:\git\controllogix\ControlLogix\ControlLogix\bin\Debug\netcoreapp2.2\SPPA-T3000 Database.dll
-C:\git\controllogix\ControlLogix\ControlLogix\bin\Debug\netcoreapp2.2\Infralution.Controls.VirtualTree.dll
-C:\git\controllogix\ControlLogix\ControlLogix\bin\Debug\netcoreapp2.2\Infralution.Controls.dll
-C:\git\controllogix\ControlLogix\ControlLogix\bin\Debug\netcoreapp2.2\Infralution.Common.dll
-C:\git\controllogix\ControlLogix\ControlLogix\bin\Debug\netcoreapp2.2\ProcessConnection.pdb
-C:\git\controllogix\ControlLogix\ControlLogix\bin\Debug\netcoreapp2.2\de\Infralution.Controls.VirtualTree.resources.dll
-C:\git\controllogix\ControlLogix\ControlLogix\bin\Debug\netcoreapp2.2\fr\Infralution.Controls.VirtualTree.resources.dll
-C:\git\controllogix\ControlLogix\ControlLogix\bin\Debug\netcoreapp2.2\it\Infralution.Controls.VirtualTree.resources.dll
-C:\git\controllogix\ControlLogix\ControlLogix\bin\Debug\netcoreapp2.2\ru\Infralution.Controls.VirtualTree.resources.dll
-C:\git\controllogix\ControlLogix\ControlLogix\bin\Debug\netcoreapp2.2\zh-Hans\Infralution.Controls.VirtualTree.resources.dll
-C:\git\controllogix\ControlLogix\ControlLogix\bin\Debug\netcoreapp2.2\de\Infralution.Controls.resources.dll
-C:\git\controllogix\ControlLogix\ControlLogix\bin\Debug\netcoreapp2.2\fr\Infralution.Controls.resources.dll
-C:\git\controllogix\ControlLogix\ControlLogix\bin\Debug\netcoreapp2.2\it\Infralution.Controls.resources.dll
-C:\git\controllogix\ControlLogix\ControlLogix\bin\Debug\netcoreapp2.2\ru\Infralution.Controls.resources.dll
-C:\git\controllogix\ControlLogix\ControlLogix\bin\Debug\netcoreapp2.2\zh-Hans\Infralution.Controls.resources.dll
-C:\git\controllogix\ControlLogix\ControlLogix\bin\Debug\netcoreapp2.2\de\Infralution.Common.resources.dll
-C:\git\controllogix\ControlLogix\ControlLogix\bin\Debug\netcoreapp2.2\fr\Infralution.Common.resources.dll
-C:\git\controllogix\ControlLogix\ControlLogix\bin\Debug\netcoreapp2.2\it\Infralution.Common.resources.dll
-C:\git\controllogix\ControlLogix\ControlLogix\bin\Debug\netcoreapp2.2\ru\Infralution.Common.resources.dll
-C:\git\controllogix\ControlLogix\ControlLogix\bin\Debug\netcoreapp2.2\zh-Hans\Infralution.Common.resources.dll
 C:\git\controllogix\ControlLogix\ControlLogix\obj\Debug\netcoreapp2.2\Razor\Views\Components\Details.g.cshtml.cs
 C:\git\controllogix\ControlLogix\ControlLogix\obj\Debug\netcoreapp2.2\Razor\Views\Components\Index.g.cshtml.cs
