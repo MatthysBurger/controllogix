@@ -12,9 +12,26 @@ namespace ControlLogix.Controllers
     public class ComponentsController : Controller
     {
         // GET: Components
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
-            return View();
+            LogicBlock[] lbs = ProcessConnectionManager.GetLogicBlocks();
+            if (lbs == null)
+            {
+                LogicBlock lb_Error = new LogicBlock();
+                lb_Error.ID = -1;
+                lb_Error.TypeName = "error. nothing found";
+                lbs = new LogicBlock[1] { lb_Error };
+
+                return View(lb_Error);
+            }
+            else
+            {
+                if (!String.IsNullOrEmpty(searchString))
+                {
+                    lbs = lbs.Where(s => s.ID.ToString().Contains(searchString) || s.TypeName.Contains(searchString)).ToArray();
+                }
+            }
+            return View(lbs);
         }
 
         // GET: Components/Details/5
