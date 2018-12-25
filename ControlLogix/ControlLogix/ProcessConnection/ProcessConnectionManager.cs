@@ -12,5 +12,10 @@ namespace ControlLogix.ProcessConnection
         {
             return ProcessConnectionTCPClient.RequestComponent(id.ToString(), 12345);
         }
+
+        static public LogicBlock[] GetLogicBlocks()
+        {
+            return ProcessConnectionTCPClient.RequestComponents(12345);
+        }
     }
 }

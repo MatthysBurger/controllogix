@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ControlLogix.Models.Library>
+﻿@model IEnumerable<SPPA_T3000.Process_Connection.LogicBlock>
 
 @{
     ViewData["Title"] = "Components";
@@ -6,37 +6,59 @@
 
 <h1>Components</h1>
 
-@*<table class="table">
+<br />
+
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+}
+
+<br />
+
+<h3>Total components found = @Model.Count()</h3>
+<p>*Displaying first 50 components only</p>
+
+@{
+    int count = 0;
+}
+
+<table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.PrimaryKey)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                ID
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Description)
+                TypeName
             </th>
-            <th></th>
+            <th>
+            </th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.PrimaryKey)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.ActionLink("Details", "Details", new { id=item.PrimaryKey })
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Take(50))
+        {
+            count++;
+
+            <tr>
+                <td>
+                    @count
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TypeName)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = item.ID })
+                </td>
+            </tr>
+        }
     </tbody>
-</table>*@
+</table>
